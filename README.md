@@ -28,11 +28,15 @@ A fast, responsive, single-page static site.
 
 ## Booking form
 
-The form currently opens the visitor's email app pre-filled to
-`lilsaintdenny@gmail.com` (no backend required).
+The form has **no contact destination configured yet** — it validates
+input but does not deliver enquiries. Choose one of these to activate it:
 
-To collect submissions automatically instead, point the form at a form
-service such as [Formspree](https://formspree.io):
+**Option A — email a recipient (no backend):**
+In `script.js`, add a recipient and compose a `mailto:` link in the
+`submit` handler (opens the visitor's email app pre-filled).
+
+**Option B — a form service (recommended):**
+Point the form at a service such as [Formspree](https://formspree.io):
 
 1. Set `action="https://formspree.io/f/your-id"` and `method="POST"` on
    the `<form id="booking-form">` in `index.html`.

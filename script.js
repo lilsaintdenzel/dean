@@ -55,13 +55,13 @@
     });
   }
 
-  // Booking form -> compose an email to Dean.
-  // Static site: opens the visitor's mail client pre-filled. To collect
-  // submissions automatically instead, point this form at a service such
-  // as Formspree (set the form's action/method) and remove this handler.
+  // Booking form.
+  // No contact destination is configured yet. Until one is set — either a
+  // recipient email (compose a mailto) or a form service such as Formspree
+  // (set the form's action/method and remove this handler) — the form
+  // validates input but cannot deliver the enquiry.
   var form = document.getElementById("booking-form");
   var note = document.getElementById("form-note");
-  var RECIPIENT = "lilsaintdenny@gmail.com";
 
   if (form) {
     form.addEventListener("submit", function (e) {
@@ -72,41 +72,9 @@
         return;
       }
 
-      var name = form.name.value.trim();
-      var email = form.email.value.trim();
-      var service = form.service.value;
-      var date = form.date.value;
-      var message = form.message.value.trim();
-
-      var subject = "Booking enquiry — " + service + " — " + name;
-      var bodyLines = [
-        "Name: " + name,
-        "Email: " + email,
-        "Service: " + service,
-        "Date of event / lesson: " + (date || "Not specified"),
-        "",
-        "Message:",
-        message || "(none)",
-        "",
-        "— Sent from The Deaton Academy website"
-      ];
-      var body = bodyLines.join("\n");
-
-      var mailto =
-        "mailto:" +
-        RECIPIENT +
-        "?subject=" +
-        encodeURIComponent(subject) +
-        "&body=" +
-        encodeURIComponent(body);
-
-      window.location.href = mailto;
-
       if (note) {
         note.textContent =
-          "Opening your email app to send the enquiry. If nothing happens, email " +
-          RECIPIENT +
-          " directly.";
+          "Thanks! Online booking isn't connected yet — please check back soon.";
         note.className = "form-note ok";
       }
     });
