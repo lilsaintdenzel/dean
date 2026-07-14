@@ -406,7 +406,8 @@ h2 { font-size: clamp(2rem, 4.2vw, 3rem); }
 }
 .media-meta { padding: 1.1rem 1.25rem 1.35rem; }
 .media-title { display: block; font-family: var(--serif); font-size: 1.35rem; color: var(--cream); }
-.media-note { display: block; font-size: 0.8rem; color: rgba(246,239,228,0.55); margin-top: 2px; }
+.media-note { display: block; font-size: 0.8rem; color: var(--gold-soft); margin-top: 2px; font-weight: 600; }
+.media-cta { text-align: center; margin-top: 2.75rem; }
 
 /* ---------- Testimonials ---------- */
 
@@ -530,6 +531,7 @@ h2 { font-size: clamp(2rem, 4.2vw, 3rem); }
 .footer-nav { display: flex; flex-wrap: wrap; gap: 1.25rem; }
 .footer-nav a { color: var(--cream-2); font-size: 0.9rem; transition: color 0.2s ease; }
 .footer-nav a:hover { color: var(--gold-soft); }
+.footer-contact { display: flex; flex-wrap: wrap; gap: 1.25rem; }
 .footer-contact a { color: var(--gold-soft); font-weight: 600; }
 .footer-legal { padding-top: 1.25rem; }
 .footer-legal p { margin: 0; font-size: 0.8rem; color: var(--muted); }

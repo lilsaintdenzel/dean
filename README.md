@@ -38,10 +38,11 @@ service such as [Formspree](https://formspree.io):
    the `<form id="booking-form">` in `index.html`.
 2. Remove the `submit` handler in `script.js`.
 
-## Adding YouTube links
+## YouTube
 
-In `index.html`, each `.media-card` is an `<a href="#">`. Replace `#` with
-the YouTube URL and update the card title / note text.
+The Media cards and footer link to the channel:
+<https://youtube.com/@edinamdean>. To point a card at a specific video
+instead, replace that card's `href` in `index.html` with the video URL.
 
 ## Running locally
 
