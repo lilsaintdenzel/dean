@@ -1,4 +1,4 @@
-// The Deaton Academy — interactions
+// The Deaton Academy interactions
 
 (function () {
   "use strict";
@@ -28,7 +28,7 @@
   var revealTargets = document.querySelectorAll(
     ".about-text, .about-media, .events-text, .events-media, " +
       ".coaching-text, .coaching-media, .section-head, .media-card, " +
-      ".testimonial, .book-intro, .book-form, .community-content"
+      ".testimonial, .book-intro, .book-form, .community-content, .event-card"
   );
   revealTargets.forEach(function (el) {
     el.classList.add("reveal");
@@ -56,9 +56,9 @@
   }
 
   // Booking form.
-  // No contact destination is configured yet. Until one is set — either a
+  // No contact destination is configured yet. Until one is set, either a
   // recipient email (compose a mailto) or a form service such as Formspree
-  // (set the form's action/method and remove this handler) — the form
+  // (set the form's action/method and remove this handler), the form
   // validates input but cannot deliver the enquiry.
   var form = document.getElementById("booking-form");
   var note = document.getElementById("form-note");
@@ -74,7 +74,7 @@
 
       if (note) {
         note.textContent =
-          "Thanks! Online booking isn't connected yet — please check back soon.";
+          "Thanks! Online booking isn't connected yet. Please check back soon.";
         note.className = "form-note ok";
       }
     });

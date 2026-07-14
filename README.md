@@ -1,6 +1,6 @@
 # The Deaton Academy
 
-Website for **The Deaton Academy** — professional live singing and vocal
+Website for **The Deaton Academy**: professional live singing and vocal
 coaching with Dean Eaton, director of the Cambridge University Gospel Choir.
 
 > *Find your true voice, develop more confidence.*
@@ -18,24 +18,24 @@ A fast, responsive, single-page static site.
 
 ## Sections
 
-- **Hero** — headline and calls to action
-- **About** — introduction and background
-- **Live Singing** — event performance service
-- **Vocal Coaching** — lessons and workshops
-- **Media & Portfolio** — space for YouTube performance links
-- **Testimonials** — client quotes
-- **Booking** — enquiry form + three-step process
+- **Hero**: headline and calls to action
+- **About**: introduction and background
+- **Live Singing**: event performance service
+- **Vocal Coaching**: lessons and workshops
+- **Media & Portfolio**: space for YouTube performance links
+- **Testimonials**: client quotes
+- **Booking**: enquiry form + three-step process
 
 ## Booking form
 
-The form has **no contact destination configured yet** — it validates
+The form has **no contact destination configured yet**: it validates
 input but does not deliver enquiries. Choose one of these to activate it:
 
-**Option A — email a recipient (no backend):**
+**Option A: email a recipient (no backend):**
 In `script.js`, add a recipient and compose a `mailto:` link in the
 `submit` handler (opens the visitor's email app pre-filled).
 
-**Option B — a form service (recommended):**
+**Option B: a form service (recommended):**
 Point the form at a service such as [Formspree](https://formspree.io):
 
 1. Set `action="https://formspree.io/f/your-id"` and `method="POST"` on

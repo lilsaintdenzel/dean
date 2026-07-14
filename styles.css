@@ -1,6 +1,6 @@
 /* ===============================================================
-   The Deaton Academy — styles
-   Palette: candlelit chapel — charcoal, warm gold, cream
+   The Deaton Academy styles
+   Palette: candlelit chapel: charcoal, warm gold, cream
    =============================================================== */
 
 :root {
@@ -452,6 +452,60 @@ h2 { font-size: clamp(2rem, 4.2vw, 3rem); }
 }
 .testimonial figcaption { font-weight: 700; color: var(--gold-deep); letter-spacing: 0.02em; }
 
+/* ---------- Past Events ---------- */
+
+.past-events { background: var(--paper); }
+.event-grid { display: grid; gap: 2rem; max-width: 920px; margin-inline: auto; }
+.event-card {
+  display: grid;
+  grid-template-columns: 0.82fr 1fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  box-shadow: 0 20px 45px -32px rgba(0, 0, 0, 0.45);
+}
+.event-poster { display: block; }
+.event-poster img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease;
+}
+.event-poster:hover img { transform: translateY(-4px); }
+.event-tag {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(199, 154, 75, 0.14);
+  color: var(--gold-deep);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 1rem;
+}
+.event-body h3 {
+  font-family: var(--serif);
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  color: var(--charcoal);
+  margin: 0 0 0.6rem;
+}
+.event-intro { color: var(--muted); margin: 0; }
+.event-meta { list-style: none; margin: 1.35rem 0 0; padding: 0; display: grid; gap: 0.7rem; }
+.event-meta li { display: flex; gap: 0.85rem; align-items: baseline; color: var(--charcoal); }
+.event-meta-label {
+  flex: none;
+  width: 58px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--gold-deep);
+}
+
 /* ---------- Booking ---------- */
 
 .book-grid {
@@ -599,6 +653,9 @@ h2 { font-size: clamp(2rem, 4.2vw, 3rem); }
 
   .media-grid { grid-template-columns: 1fr; }
   .testimonial-grid { grid-template-columns: 1fr; }
+
+  .event-card { grid-template-columns: 1fr; }
+  .event-poster { max-width: 420px; margin-inline: auto; }
 }
 
 @media (max-width: 560px) {
