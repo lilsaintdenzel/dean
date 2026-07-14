@@ -543,8 +543,17 @@ h2 { font-size: clamp(2rem, 4.2vw, 3rem); }
 .footer-nav a:hover { color: var(--gold-soft); }
 .footer-contact { display: flex; flex-wrap: wrap; gap: 1.25rem; }
 .footer-contact a { color: var(--gold-soft); font-weight: 600; }
-.footer-legal { padding-top: 1.25rem; }
+.footer-legal {
+  padding-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+  align-items: center;
+  justify-content: space-between;
+}
 .footer-legal p { margin: 0; font-size: 0.8rem; color: var(--muted); }
+.footer-credit a { color: var(--gold-soft); font-weight: 600; }
+.footer-credit a:hover { color: var(--gold); }
 
 /* ---------- Reveal on scroll ---------- */
 
