@@ -55,13 +55,12 @@
     });
   }
 
-  // Booking form.
-  // No contact destination is configured yet. Until one is set, either a
-  // recipient email (compose a mailto) or a form service such as Formspree
-  // (set the form's action/method and remove this handler), the form
-  // validates input but cannot deliver the enquiry.
+  // Booking form: compose a pre-filled email to Dean (no backend required).
+  // To collect submissions automatically instead, point the form at a service
+  // such as Formspree (set the form's action/method) and remove this handler.
   var form = document.getElementById("booking-form");
   var note = document.getElementById("form-note");
+  var RECIPIENT = "edinamdean@gmail.com";
 
   if (form) {
     form.addEventListener("submit", function (e) {
@@ -72,9 +71,34 @@
         return;
       }
 
+      var name = form.name.value.trim();
+      var email = form.email.value.trim();
+      var service = form.service.value;
+      var date = form.date.value;
+      var message = form.message.value.trim();
+
+      var subject = "Booking enquiry: " + service + " (" + name + ")";
+      var body = [
+        "Name: " + name,
+        "Email: " + email,
+        "Service: " + service,
+        "Date of event / lesson: " + (date || "Not specified"),
+        "",
+        "Message:",
+        message || "(none)",
+        "",
+        "Sent from The Deaton Academy website"
+      ].join("\n");
+
+      window.location.href =
+        "mailto:" + RECIPIENT +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
       if (note) {
         note.textContent =
-          "Thanks! Online booking isn't connected yet. Please check back soon.";
+          "Opening your email app to send the enquiry. If nothing happens, email " +
+          RECIPIENT + " directly.";
         note.className = "form-note ok";
       }
     });
